@@ -1,0 +1,45 @@
+{
+  "name": "info",
+  "version": "1.0.0",
+  "main": "sample.js",
+  "type": "module",
+  "scripts": {
+    
+    "test": "jest",
+    "test:c": "jest --coverage",
+    "test:w": "jest --watchAll --collectCoverage",
+    "test:node": "node --test *native*"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.24.8",
+    "@types/jest": "^29.5.12",
+    "eslint-plugin-jest": "^28.8.2",
+    "jest": "^29.7.0"
+  },
+  "env": {
+    "jest": true
+  },
+  "typeAcquisition": {
+    "include": [
+      "jest"
+    ]
+  },
+  "babel": {
+    "env": {
+      "test": {
+        "plugins": [
+          "@babel/plugin-transform-modules-commonjs"
+        ]
+      }
+    }
+  },
+  "jest":{
+    "testPathIgnorePatterns":[
+      "/sample_node_native.test.js"
+    ]
+  }
+}
